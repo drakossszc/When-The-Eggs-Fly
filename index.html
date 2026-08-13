@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="When the Eggs Fly - juego interactivo de reventar huevos">
+  <title>When the Eggs Fly</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+      <div class="brand">
+        <span class="egg-logo">🥚</span>
+        <div>
+          <h1>WHEN THE EGGS FLY</h1>
+          <p>¡Revienta los huevos antes de que caigan!</p>
+        </div>
+      </div>
+
+      <div class="score-panel">
+        <div class="score-card">
+          <span>PUNTOS</span>
+          <strong id="score">0</strong>
+        </div>
+        <div class="score-card">
+          <span>RÉCORD</span>
+          <strong id="bestScore">0</strong>
+        </div>
+      </div>
+    </header>
+
+    <section class="info-bar">
+      <div class="legend">
+        <span><i class="dot normal"></i> Normal +1</span>
+        <span><i class="dot small"></i> Chiquito +3</span>
+        <span><i class="dot gold"></i> Dorado +5</span>
+        <span><i class="dot rainbow"></i> Arcoíris +10</span>
+      </div>
+      <div class="misses">Fallos: <strong id="misses">0</strong>/10</div>
+    </section>
+
+    <section class="game-area" id="gameArea">
+      <canvas id="gameCanvas"></canvas>
+
+      <div class="start-screen" id="startScreen">
+        <div class="egg-burst">🥚 ✨ 🥚</div>
+        <h2>¿LISTO?</h2>
+        <p>Haz clic o toca los huevos para reventarlos.</p>
+        <button id="startBtn">JUGAR</button>
+      </div>
+
+      <div class="game-over hidden" id="gameOver">
+        <div class="game-over-card">
+          <div class="big-egg">🍳</div>
+          <h2>¡FIN DEL JUEGO!</h2>
+          <p>Tu puntuación</p>
+          <strong id="finalScore">0</strong>
+          <p class="best-line">Récord: <span id="finalBest">0</span></p>
+          <button id="restartBtn">JUGAR DE NUEVO</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="controls">
+      <span>💡 Consejo: los huevos dorados y arcoíris dan muchos más puntos.</span>
+      <button id="soundBtn" class="sound-btn" aria-label="Activar o desactivar sonido">🔊</button>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
